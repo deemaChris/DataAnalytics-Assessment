@@ -5,7 +5,6 @@ Each SQL file contains one query that is properly formatted, well-indented, and 
 ##  Per-Question Explanations
 
 ---
-
 ###  Assessment_Q1.sql — **Active Users with Both Savings and Investment Accounts**  
 Users with at least one investment account and one savings account are identified by this query.
 
@@ -22,7 +21,6 @@ This search provides a consolidated view of a client's:
 - It applies a straightforward formula for customer value and merges the previously calculated customer data (tenure, withdrawals, and deposits).
 
 ---
-
 ###  Assessment_Q3.sql — **Inactive Accounts Over One Year**  
 This search identifies accounts that haven't had any deposits or withdrawals for more than a year:
 
@@ -43,14 +41,12 @@ This query uses the following reasoning to determine the predicted CLV for each 
 ---
 
 ##  Challenges & Resolutions
-
 - Managing Inactivity Logic (Q3): Careful usage of subqueries and backup logic was necessary to ensure the accurate "last activity" date across two sources (accounts and withdrawals). To make this strong, I combined GREATEST() and COALESCE(). 
 - CLV Calculation (Q1 & Q4): Using GREATEST(tenure, 1) to avoid division by zero was necessary to estimate financial value over time. Data Normalization: All monetary fields were translated to base currency by dividing by 100 because quantities were stored in kobo.
 
 ---
 
 ## Ownership & Ethics
-
 All of the art is original to me.
 
 - No solutions from other sources were duplicated, distributed, or modified.
